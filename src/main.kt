@@ -3,7 +3,7 @@ fun main() {
     println("Seja Bem vindo ao Kotlin")
     println()
 
-    val alex = Funcionario(
+    val alex = Analista(
         "Alex",
         "000.111.222-33",
         10000.00
@@ -19,8 +19,9 @@ fun main() {
     val lincoln = Diretor(
         nome = "Lincoln",
         cpf = "000.111.223.45",
-        salario = 30000.00,
-        senha = 1234
+        30000.00,
+        1234,
+        1000.00
     )
 
     println("Nome: ${alex.nome}")
@@ -45,6 +46,7 @@ fun main() {
     println("Nome: ${lincoln.nome}")
     println("Cpf: ${lincoln.cpf}")
     println("Salário: ${lincoln.salario}")
+    println("PLR: ${lincoln.plr}")
     println("Bonificação: ${lincoln.bonificacao}")
 
 
@@ -53,4 +55,13 @@ fun main() {
     }else{
         println("Problemas com a autenticação!")
     }
+    println()
+
+    val calculadora = CalculadoraBonificacao()
+    calculadora.registra(alex)
+    calculadora.registra(fran)
+    calculadora.registra(lincoln)
+
+    println("Total de bonificacoes: ${calculadora.total}")
+
 }
