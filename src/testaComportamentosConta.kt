@@ -1,4 +1,4 @@
-fun testaComportamentos() {
+fun testaComportamentosConta() {
     println("Bem vindo ao ByteBank")
 
     val contaLincoln = Conta("Lincoln", 1010);
