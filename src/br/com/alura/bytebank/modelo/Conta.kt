@@ -1,4 +1,6 @@
-package modelo
+package br.com.alura.bytebank.modelo
+
+import totalContas
 
 abstract class Conta(
     var titular: Cliente,
@@ -6,6 +8,7 @@ abstract class Conta(
 ) {
     var saldo = 0.0
         protected set
+    var total = 0
 
     fun deposita(valor: Double) {
         if(valor>0){
@@ -13,6 +16,10 @@ abstract class Conta(
         }
     }
 
+    init{
+        println("Criando Conta")
+        totalContas++
+    }
     abstract fun saca(valor: Double)
 
     fun transfere(valor: Double, contaDestino: Conta): Boolean {

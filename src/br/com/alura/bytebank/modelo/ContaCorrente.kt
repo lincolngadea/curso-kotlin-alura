@@ -1,6 +1,5 @@
-package modelo
+package br.com.alura.bytebank.modelo
 
-import modelo.Conta
 
 class ContaCorrente(
     titular: Cliente,

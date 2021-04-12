@@ -1,5 +1,4 @@
-package modelo
-
+package br.com.alura.bytebank.modelo
 import br.com.alura.bytebank.modelo.Endereco
 
 class Cliente(

@@ -1,6 +1,5 @@
-package modelo
+package br.com.alura.bytebank.modelo
 
-import modelo.Funcionario
 
 abstract class FuncionarioAdmin(
     nome: String,

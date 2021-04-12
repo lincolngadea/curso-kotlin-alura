@@ -1,7 +1,7 @@
 import br.com.alura.bytebank.modelo.Endereco
-import modelo.Cliente
-import modelo.ContaCorrente
-import modelo.ContaPoupanca
+import br.com.alura.bytebank.modelo.Cliente
+import br.com.alura.bytebank.modelo.ContaCorrente
+import br.com.alura.bytebank.modelo.ContaPoupanca
 
 fun testaComportamentosConta() {
     println("Bem vindo ao ByteBank")
