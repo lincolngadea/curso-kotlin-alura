@@ -1,3 +1,5 @@
+package modelo
+
 class Analista(
     nome: String,
     cpf: String,
@@ -7,6 +9,6 @@ class Analista(
     cpf = cpf,
     salario = salario
 ) {
-    override val bonificacao: Double get() = super.bonificacao + salario
+    override val bonificacao: Double get() = salario
 
 }

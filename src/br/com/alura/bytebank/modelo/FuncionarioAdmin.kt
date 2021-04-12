@@ -1,18 +1,19 @@
-class Diretor(
+package modelo
+
+import modelo.Funcionario
+
+abstract class FuncionarioAdmin(
     nome: String,
     cpf: String,
     salario: Double,
-    val senha: Int,
-    val plr: Double
+    val senha: Int
 ): Funcionario(
     nome = nome,
     cpf = cpf,
     salario = salario
 ) {
 
-    override val bonificacao: Double get() = super.bonificacao + salario + plr
-
-    fun autentica(senha: Int): Boolean{
+    fun autentica(senha: Int):Boolean{
         if(this.senha != senha){
             return false
         }

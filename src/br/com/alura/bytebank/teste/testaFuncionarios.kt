@@ -1,8 +1,9 @@
-fun main() {
+import modelo.Analista
+import modelo.CalculadoraBonificacao
+import modelo.Diretor
+import modelo.Gerente
 
-    println("Seja Bem vindo ao Kotlin")
-    println()
-
+fun testaFuncionarios() {
     val alex = Analista(
         "Alex",
         "000.111.222-33",
@@ -20,8 +21,8 @@ fun main() {
         nome = "Lincoln",
         cpf = "000.111.223.45",
         30000.00,
-        1234,
-        1000.00
+        1000.00,
+        1234
     )
 
     println("Nome: ${alex.nome}")
@@ -36,9 +37,9 @@ fun main() {
     println("Bonificação: ${fran.bonificacao}")
 
 
-    if(fran.autentica(123)){
+    if (fran.autentica(123)) {
         println("Usuário autenticado com sucesso!")
-    }else{
+    } else {
         println("Problemas com a autenticação!")
     }
     println()
@@ -50,9 +51,9 @@ fun main() {
     println("Bonificação: ${lincoln.bonificacao}")
 
 
-    if(lincoln.autentica(1234)){
+    if (lincoln.autentica(1234)) {
         println("Usuário autenticado com sucesso!")
-    }else{
+    } else {
         println("Problemas com a autenticação!")
     }
     println()
@@ -63,5 +64,4 @@ fun main() {
     calculadora.registra(lincoln)
 
     println("Total de bonificacoes: ${calculadora.total}")
-
 }
