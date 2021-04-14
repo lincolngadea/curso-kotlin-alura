@@ -42,19 +42,26 @@ fun main(){
     }
     println("Gastos totais: $gastoTotal")
 
+    println()
 
-}
+    //Ordena Salários com aumento
+    val salariosOrdenados = salarioComAumento.sorted()
 
-//Função para somar arrays
-fun Array<BigDecimal>.somatoria(): BigDecimal{
-    return this.reduce{acc, valor->
-        acc + valor
-    }
-}
+    //Trás os 3 maiores salários
+    val tresUltimosMaioresSalarios: Array<BigDecimal> = salariosOrdenados.takeLast(3).toTypedArray()
 
-//Cria um array de BigDecimal de forma dinâmica
-fun bigDecimalArrayOf(vararg valores: String): Array<BigDecimal> {
-    return Array<BigDecimal>(valores.size){ i ->
-        valores[i].toBigDecimal()
-    }
+    //média dos 3 maiores salários
+    val media = tresUltimosMaioresSalarios.media()
+
+    /**
+     * O código abaixo retorna a mesma média porém sem a necessidade
+     * de ter a variável tresUltimosMaioresSalarios, salariosOrdenados e media
+     */
+
+    val media1 = salarioComAumento
+        .sorted()
+        .takeLast(3)
+        .toTypedArray()
+        .media()
+
 }
