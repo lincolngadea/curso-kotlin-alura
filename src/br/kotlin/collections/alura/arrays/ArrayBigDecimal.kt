@@ -25,14 +25,32 @@ fun main(){
 
     println()
 
+
     //Cria um array dinamicamente
-    val salariosDinamicos = bigDecimalArrayOf("1500.55", "2000.00")
-    println(salariosDinamicos.contentToString())
+    val arrayDinamico = bigDecimalArrayOf("1500.55", "2000.00")
+    println(arrayDinamico.contentToString())
+
+    //Somatória de arrays com reduce
+    val gastoInicial = salarioComAumento.somatoria()
+    println("Gasto inicial: $gastoInicial")
+    println()
+
+    //Verica gastos totais durante 6 meses
+    val meses = 6.toBigDecimal()
+    val gastoTotal = salarioComAumento.fold(gastoInicial) { acc, salario ->
+        acc + (salario * meses).setScale(2, RoundingMode.UP)
+    }
+    println("Gastos totais: $gastoTotal")
 
 
 }
 
-
+//Função para somar arrays
+fun Array<BigDecimal>.somatoria(): BigDecimal{
+    return this.reduce{acc, valor->
+        acc + valor
+    }
+}
 
 //Cria um array de BigDecimal de forma dinâmica
 fun bigDecimalArrayOf(vararg valores: String): Array<BigDecimal> {
