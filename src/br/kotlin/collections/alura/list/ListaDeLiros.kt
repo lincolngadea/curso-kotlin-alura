@@ -1,5 +1,7 @@
 package br.kotlin.collections.alura.list
 
+import kotlin.collections.sortBy as sortBy
+
 fun main(){
     val livro1 = Livro(
         "Título 01",
@@ -50,8 +52,9 @@ fun main(){
     livros.imprimeComMarcadores()
     println()
 
-    val ordenadoAnoPublicacao: List<Livro> = livros.sorted()
-    ordenadoAnoPublicacao.imprimeComMarcadores()
+    //Ordena os Livros por título
+    val ordenadoPorTitulo = livros.sortedBy { it.titulo }
+    ordenadoPorTitulo.imprimeComMarcadores()
 }
 
 //Cria uma função para imprimir uma lista de livro com marcadores
