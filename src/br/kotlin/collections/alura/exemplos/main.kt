@@ -3,14 +3,15 @@ package br.kotlin.collections.alura.exemplos
 fun main(){
 
     val bancoDeNomes = BancoDeNomes()
-    bancoDeNomes.salva("Camila")
+    val nomesSalvos: Collection<String> = bancoDeNomes.nomes
 
+    bancoDeNomes.salva("Camila")
     println(bancoDeNomes.nomes)
 
 }
 
 class BancoDeNomes{
-    val nomes: Collection<String> get() = dados
+    val nomes: Collection<String> get() = dados.toList()
 
     fun salva(nome: String){
        dados.add(nome)
