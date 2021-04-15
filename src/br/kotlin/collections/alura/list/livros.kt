@@ -1,6 +1,8 @@
 package br.kotlin.collections.alura.list
 
-val listaDeLivros = mutableListOf(
+import Livro
+
+val listaDeLivros: MutableList<Livro> = mutableListOf(
     Livro(
         "Vida Organizada",
         "Thais Godinho",

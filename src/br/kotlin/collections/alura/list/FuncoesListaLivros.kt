@@ -1,5 +1,7 @@
 package br.kotlin.collections.alura.list
 
+import Livro
+
 //Cria uma função para imprimir uma lista de livro com marcadores
 fun List<Livro?>.imprimeComMarcadores(){
     val textoFormatado = this
