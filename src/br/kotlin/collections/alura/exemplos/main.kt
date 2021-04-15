@@ -1,44 +1,10 @@
 package br.kotlin.collections.alura.exemplos
 
 fun main(){
-
-    val bancoDeNomes = BancoDeNomes()
-    val nomesSalvos: Collection<String> = bancoDeNomes.nomes
-
-    bancoDeNomes.salva("Camila")
-    println(bancoDeNomes.nomes)
-
-}
-
-class BancoDeNomes{
-    val nomes: Collection<String> get() = dados.toList()
-
-    fun salva(nome: String){
-       dados.add(nome)
-    }
-
-    companion object {
-        private val dados = mutableListOf<String>()
-    }
-
-}
-
-fun testaColecao() {
-    val nomes: MutableList<String> = mutableListOf(
-        "Lincoln",
-        "Pedro",
-        "Rafael",
-        "Christiny",
-        "Jackeline",
-        "Jackson",
-        "Graça"
-    )
-
-    for (nome in nomes) {
-        println(nome)
-    }
-
-    println(nomes)
-    println("Tem o nome Lincoln? ${nomes.contains("Lincoln")}")
-    println("Tamano da coleção ${nomes.size}")
+    val alunosDeAndroid: MutableSet<String> = mutableSetOf("Rafael", "Pedro", "Lincoln", "Romário", "Carol")
+    val alunosDeKotlin: MutableSet<String> = mutableSetOf("Carol", "Lincolin", "Marílha", "Ricardo")
+    val todosOsAlunos:MutableSet<String> = mutableSetOf<String>()
+    todosOsAlunos.addAll(alunosDeAndroid)
+    todosOsAlunos.addAll(alunosDeKotlin)
+    println(todosOsAlunos)
 }
