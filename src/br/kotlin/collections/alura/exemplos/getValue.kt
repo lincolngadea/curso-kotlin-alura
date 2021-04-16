@@ -2,7 +2,7 @@ package br.kotlin.collections.alura.exemplos
 
 fun main() {
 
-    val pedidos: MutableMap<Int, Double?> = mutableMap()
+    val pedidos: MutableMap<Int, Double?> = mapaDePedidos()
 
     val valorExistente: Double? = pedidos.getValue(1)
     val valorNulo: Double? = pedidos.getValue(4)

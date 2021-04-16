@@ -1,7 +1,7 @@
 package br.kotlin.collections.alura.exemplos
 
 fun main(){
-    val pedidos: MutableMap<Int, Double?> = mutableMap()
+    val pedidos: MutableMap<Int, Double?> = mapaDePedidos()
     println(pedidos.getOrDefault(0,-1.0))
 
     /**
