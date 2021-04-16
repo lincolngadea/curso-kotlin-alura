@@ -1,16 +1,37 @@
 package br.kotlin.collections.alura.exemplos
 
 fun main(){
-    val pedidos: Map<Int, Double> = mapOf(Pair(1,30.0), Pair(2,20.0), 3 to 50.0)
+    val pedidos: MutableMap<Int, Double?> = mutableMap()
+
     println(pedidos)
 
-//    val pedido:Double? = pedidos[1]
-//    pedido?.let { println("Pedido $it") }
+    val pedido:Double? = pedidos[1]
+    pedido?.let { println("Pedido $it") }
 
-    for(pedido: Map.Entry<Int,Double> in pedidos){
-        println("Número do pedido: ${pedido.key}")
-        println("Valor do pedido: ${pedido.value}")
+    for(p: Map.Entry<Int,Double?> in pedidos){
+        println("Número do pedido: ${p.key}")
+        println("Valor do pedido: ${p.value}")
         println()
     }
+
+    //retorna um array com as chaves do mapa
+    println(pedidos.keys)
+
+    //retorna um array com os valores do mapa
+    println(pedidos.values)
+
+    //Cria uma iteração dentro do mapa e retorna a chave
+    for(valor: Int in pedidos.keys){
+        println("Pedido $valor")
+    }
+
+    //Cria uma iteração dentro do mapa e retorna os valores
+    for(valor: Double? in pedidos.values){
+        if(valor != null){
+            println("Valor $valor")
+        }
+    }
+
+
 }
 
